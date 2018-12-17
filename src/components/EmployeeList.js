@@ -12,7 +12,6 @@ class EmployeeList extends Component {
         this
             .props
             .employeesFetch();
-        console.log(this.props.employees);
         this.createDataSource(this.props)
 
     }
