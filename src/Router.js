@@ -7,10 +7,10 @@ import {Actions} from 'react-native-router-flux'
 
 const RouterComponent = () => {
     return (
-        <Router>
+        <Router cardStyle={{backgroundColor: '#FFF'}}>
             <Scene key='root' hideNavBar>
-                <Scene key='auth'>
-                    <Scene key='login' component={LoginForm} title='Please Login' initial></Scene>
+                <Scene key='auth' initial>
+                    <Scene key='login' component={LoginForm} title='Please Login' ></Scene>
                 </Scene>
                 <Scene key='main'>
                     <Scene
@@ -18,8 +18,9 @@ const RouterComponent = () => {
                         onRight={() => {Actions.employeeCreate()}}
                         key='employeeList'
                         component={EmployeeList}
-                        title='Employee List'></Scene>
-                    <Scene key='employeeCreate' title='Create Employee' component={EmployeeCreate}></Scene>
+                        title='Employee List'
+                        ></Scene>
+                    <Scene key='employeeCreate' title='Create Employee' component={EmployeeCreate} ></Scene>
                 </Scene>
             </Scene>
         </Router>
