@@ -1,4 +1,11 @@
-import {EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER_SUCCESS, LOGIN_USER_FAILED, LOGIN_USER} from '../actions/types';
+import {
+    EMAIL_CHANGED,
+    PASSWORD_CHANGED,
+    LOGIN_USER_SUCCESS,
+    LOGIN_USER_FAILED,
+    LOGIN_USER,
+    EMPLOYEE_SAVE_SUCCESS
+} from '../actions/types';
 
 const INITIAL_STATE = {
     email: '',
@@ -41,6 +48,7 @@ export default(state = INITIAL_STATE, action) => {
                 loading: true,
                 error: ''
             }
+        
         default:
             return state;
     }

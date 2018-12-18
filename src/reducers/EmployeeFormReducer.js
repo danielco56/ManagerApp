@@ -1,4 +1,4 @@
-import {EMPLOYEE_UPDATE, EMPLOYEE_CREATE} from '../actions/types';
+import {EMPLOYEE_UPDATE, EMPLOYEE_CREATE, EMPLOYEE_CLEAR_SUCCESS} from '../actions/types';
 
 const INITIAL_STATE = {
     name: '',
@@ -17,7 +17,8 @@ export default(state = INITIAL_STATE, action) => {
             return {
                 INITIAL_STATE
             }
-
+            case EMPLOYEE_CLEAR_SUCCESS:
+            return {INITIAL_STATE}
         default:
             return state;
     }
